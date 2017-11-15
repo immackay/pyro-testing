@@ -38,7 +38,7 @@ class RegressionModel(nn.Module):
 
 regression_model = RegressionModel(p)  # Network model - linear regression
 loss_fn = nn.MSELoss(size_average=False)  # Mean squared error loss function
-optim = Adam(regression_model.parameters(), LR)  # Adam optimizer
+optim = Adam((regression_model.parameters(), LR))  # Adam optimizer
 
 
 def main():
